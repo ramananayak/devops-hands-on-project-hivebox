@@ -11,8 +11,7 @@
   </a>
 </p>
 
-> [!CAUTION]
-> **[Fork](https://github.com/DevOpsHiveHQ/devops-hands-on-project-hivebox/fork)** this repo, and create PRs in your fork, **NOT** in this repo!
+> [!CAUTION] > **[Fork](https://github.com/DevOpsHiveHQ/devops-hands-on-project-hivebox/fork)** this repo, and create PRs in your fork, **NOT** in this repo!
 
 > [!TIP]
 > If you are looking for the full roadmap, including this project, go back to the [getting started](https://devopsroadmap.io/getting-started) page.
@@ -52,5 +51,17 @@ Here is a pre-start checklist:
 
 ## Implementation
 
-** ADD YOUR IMPLEMENTATION DOCUMENTATION HERE **
+**ADD YOUR IMPLEMENTATION DOCUMENTATION HERE**
+
 - As a part of phase-1 github forked repo and github project is created
+
+### phase-2
+
+- create a requirement file to install python packages
+- create a Dockerfile to run app from python package and setup version as environment veriable
+- print the version and exit
+
+### steps to run
+
+- podman build -t devops-phase2-lab --build-arg VERSION=0.0.1 .
+- podman container run -p 5001:5000 -d devops-phase2-lab devops-phase2-lab
