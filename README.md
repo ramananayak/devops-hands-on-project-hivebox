@@ -63,5 +63,8 @@ Here is a pre-start checklist:
 
 ### steps to run
 
-- podman build -t devops-phase2-lab --build-arg VERSION=0.0.1 .
-- podman container run -p 5001:5000 -d devops-phase2-lab devops-phase2-lab
+```shell
+podman build --tag devops-phase-2-lab --build-arg VERSION="$(git describe --tags)" .
+
+podman run -p 5001:5000 -d --name devops-phase-2-lab devops-phase-2-lab
+```
